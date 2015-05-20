@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "del": "^1.1.1",
+    "esprima-fb": "^15001.1.0-dev-harmony-fb",
     "event-stream": "^3.1.7",
     "gulp": "^3.8.10",
     "gulp-cached": "^1.0.1",
