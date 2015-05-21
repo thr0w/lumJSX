@@ -1,6 +1,5 @@
 var TiposBotoes = {
   componentWillMount: function(element) {
-    this.classRipple = [];
   },
   componentWillUnmount: function() {
     $timeout.cancel(timeout);
@@ -31,21 +30,26 @@ var TiposBotoes = {
 
 var HButton = React.createClass({
   mixins: [TiposBotoes, Hripple],
-  getInitialState: function () {
-        return {
-            filhos: []
-        };
-    },
+
+  getInitialState: function() {
+  return {ripple_css:{}};
+  },
+
   render: function() {
-  if(this.props.icon){
-      this.state.filhos.push(this.icon());
-    }
-   if(this.props.nome)
-      this.state.filhos.push(this.props.nome);
-    return (
-      React.createElement("button", {className: this.tipo()},
-         this.state.filhos)
-    );
+
+    var attrs={className: this.tipo()};
+
+    var filhos=[];
+
+    if(this.props.icon)
+      filhos.push(this.icon());
+
+    if(this.props.nome)
+      filhos.push(this.props.nome);
+
+    this.ripple(attrs, filhos);
+
+    return React.createElement("button", attrs, filhos);
   }
 });
 
