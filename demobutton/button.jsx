@@ -28,8 +28,9 @@ var TiposBotoes = {
   }
 };
 
-var HButton = React.createClass({
-  mixins: [TiposBotoes, Hripple],
+var ui.button={normal}
+var button_normal = React.createClass({
+  mixins: [TiposBotoes],
 
   getInitialState: function() {
   return {ripple_css:{}};
@@ -39,7 +40,7 @@ var HButton = React.createClass({
 
     var attrs={className: this.tipo()};
 
-    var filhos=[];
+    var filhos=this.props.children?(Array.isArray(this.props.children)?this.props.children:[this.props.children]):[];
 
     if(this.props.icon)
       filhos.push(this.icon());
@@ -60,11 +61,12 @@ React.render(
         <h4 className="main-section__subtitle">Types</h4>
         <div className="example mt++">
             <div className="example__content">
-                <HButton nome={"Botão 1"} tipo={"simples"}/>
+            <HButton tipo={"simples"}> Botão 1 </HButton>
                 <HButton nome={"Botão 2"} tipo={"fundoTransparente"}/>
                 <HButton icon={"plus"} tipo={"redondo"} />
                 <HButton icon={"plus"} tipo={"iconTransparent"} />
                 <HButton icon={"facebook"} tipo={"redondo"} />
+                <button class="btn btn--m btn--raised bgc-indigo-200 tc-indigo-600"><lx-ripple/>Button</button>
             </div>
         </div>
     </div>

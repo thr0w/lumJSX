@@ -41,18 +41,14 @@ var Hripple = {
         if (!this.ripple_active)
             return;
 
-        var ripple = React.createElement('span', {
+        var ripple_attrs = {
             className: 'ripple ripple--is-animated',
             style: this.state.ripple_css
-        });
+        };
+        if (this.props['lxRipple'])
+            ripple_attrs += ' bgc-' + this.props['lxRipple'];
+        var ripple = React.createElement('span', ripple_attrs);
         children.push(ripple);
-
-        /*if (attrs.lxRipple)
-                              {
-                                  ripple.addClass('bgc-' + attrs.lxRipple);
-                                  } */
-
-
     },
     activate_ripple: function () {
         this.ripple_active = setTimeout(this.deactivate_ripple.bind(this), 651);
