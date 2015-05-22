@@ -14,6 +14,8 @@ var app = express();
 
 var port = process.env.PORT || 8080;
 
+app.use('/thirdparty', express.static(__dirname + '/thirdparty'));
+app.use('/font-icons/style.css', express.static(__dirname + '/app/style.css'));
 app.use('/js/lumx.js', express.static(__dirname + '/dist/lumx.js'));
 app.use('/lumx.css', express.static(__dirname + '/dist/lumx.css'));
 app.use('/libs', express.static(__dirname + '/libs'));
@@ -47,7 +49,7 @@ app.use('/js/utils/transclude-replace_directive.js', express.static(__dirname + 
 app.use('/includes/modules/button', express.static(__dirname + '/modules/button/demo'));
 
 
-app.use(express.static(__dirname + '/demo'));
+app.use(express.static(__dirname + '/app'));
 
 
 console.log("Iniciando servidor HTTP");
