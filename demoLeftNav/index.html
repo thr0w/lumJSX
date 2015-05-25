@@ -1,30 +1,15 @@
 <html>
+
 <head>
     <script src="../thirdparty/react.js"></script>
     <script src="../thirdparty/JSXTransformer.js"></script>
-    <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="../demoLeftNav/main.css">
-    </head>
+</head>
 
 
-    <body>
-        <script>
-            var WebFontConfig = {
-                google: {
-                    families: ['Roboto:400,300,500:latin']
-                }
-            };
-            (function () {
-                var wf = document.createElement('script');
-                wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-                    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-                wf.type = 'text/javascript';
-                wf.async = 'true';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(wf, s);
-            })();
-        </script>
-        <script src="bundle.js"></script>
+<body>
+    <div id="root"></div>
+  <script src="bundle.js"></script>
+</body>
 
-    </body>
 </html>

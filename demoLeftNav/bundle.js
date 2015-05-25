@@ -34340,8 +34340,9 @@ var Gbutton = React.render(React.createElement(IconButton, {
     className: "github-icon-button",
     iconClassName: "muidocs-icon-custom-github",
     href: "https://github.com/callemall/material-ui",
-    linkButton: true
-}), document.body);
+    linkButton: true,
+    textContent: "teste"
+}), document.getElementById("root"));
 
 
 //React.render(React.createElement(Gbutton, {
@@ -34352,4 +34353,5 @@ var Gbutton = React.render(React.createElement(IconButton, {
 ////React.render(<Gbutton />, document.body);
 //
 //module.exports = Gbutton;
+
 },{"material-ui":27,"material-ui/lib/raised-button":44,"material-ui/lib/styles/colors":51,"material-ui/lib/styles/theme-manager":53,"react":275}]},{},[277]);

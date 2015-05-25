@@ -1,8 +1,5 @@
 var mui = require("material-ui"),
     React = require("react"),
-    AppCanvas = mui.AppCanvas,
-    AppBar = mui.AppBar,
-    RaisedButton = mui.RaisedButton;
 var IconButton = mui.IconButton;
 
 var githubButton = (

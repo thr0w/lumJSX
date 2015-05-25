@@ -13,8 +13,9 @@ var Gbutton = React.render(React.createElement(IconButton, {
     className: "github-icon-button",
     iconClassName: "muidocs-icon-custom-github",
     href: "https://github.com/callemall/material-ui",
-    linkButton: true
-}), document.body);
+    linkButton: true,
+    textContent: "teste"
+}), document.getElementById("root"));
 
 
 //React.render(React.createElement(Gbutton, {
