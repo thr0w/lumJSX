@@ -1,8 +1,8 @@
 var React = require('react'),
-    RaisedButton = require('material-ui/lib/raised-button'),
-    ThemeManager = require('material-ui/lib/styles/theme-manager')(),
-    Colors = require('material-ui/lib/styles/colors'),
-    mui = require("material-ui");
+    mui = require('material-ui'),
+    RaisedButton = mui.RaisedButton,
+    ThemeManager = mui.ThemeManager,
+    Colors = mui.Colors;
 
 var IconButton = mui.IconButton,
     AppCanvas = mui.AppCanvas,
